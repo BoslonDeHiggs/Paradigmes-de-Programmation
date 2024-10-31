@@ -23,8 +23,8 @@ int main(int argc, char* argv[])
 
     ObjMultimediaManager manager;
 
-    manager.createVideo("gatin3.mp4", "./Videos/gatin3.mp4", 45);
-    manager.createPhoto("gatin2.png", "./Photos/gatin2.png", 0, 420);
+    manager.createVideo("gatin1", "./Videos/gatin1.mp4", 45);
+    manager.createPhoto("gatin2", "./Photos/gatin2.jpg", 0, 420);
 
     string command, type, name;
 
