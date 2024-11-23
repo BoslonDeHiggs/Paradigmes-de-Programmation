@@ -21,7 +21,7 @@ private:
 public:
     virtual ~Film() {delete[] chapter_durations;}
 
-    const int* const getChapterDurations() const {return this->chapter_durations;}
+    const int* getChapterDurations() const {return this->chapter_durations;}
     int getNumChapters() const {return this->num_chapters;}
 
     void setChapterDurations(const int* chapter_durations, int num_chapters){

@@ -26,12 +26,12 @@ public:
     void setName(string name) {this->name = name;}
 
     void print(ostream& output) const {
-        output << "Multimedia group: ";
+        output << "Multimedia group name: " << this->name << ' ';
+        output << "Content: ";
         for(auto it : *this){
-            output << it->getName() << ' ';
+            it->print(output);
         }
     }
-
 };
 
 typedef shared_ptr<Group> GroupPtr;

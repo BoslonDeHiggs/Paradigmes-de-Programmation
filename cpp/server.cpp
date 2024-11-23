@@ -17,14 +17,16 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+  ObjMultimediaManager manager;
+
+  manager.createVideo("gatin3", "./Videos/gatin3.mp4", 45);
+  manager.createPhoto("gatin2", "./Photos/gatin2.jpg", 0, 420);
+  manager.createFilm("gatin4", "./Videos/gatin4.mp4", 120, new int[3]{30, 30, 30}, 3);
+  manager.createGroup("gatin", list<ObjMultimediaPtr>{manager.createPhoto("gatin1", "./Photos/gatin1.jpg", 0, 420), manager.createVideo("gatin3", "./Videos/gatin3.mp4", 45), manager.createFilm("gatin4", "./Videos/gatin4.mp4", 120, new int[3]{30, 30, 30}, 3)});
+
   // cree le TCPServer
   auto* server =
   new TCPServer( [&](std::string const& request, std::string& response) {
-
-    ObjMultimediaManager manager;
-
-    manager.createVideo("gatin1", "./Videos/gatin1.mp4", 45);
-    manager.createPhoto("gatin2", "./Photos/gatin2.jpg", 0, 420);
 
     string command, type, name;
 
